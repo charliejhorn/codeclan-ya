@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <title>Contact Form</title>
+</head>
+
+<body>
+    <main>
+        <hgroup>
+            <h1>Forms Homework</h1>
+            <h2>Example Form</h2>
+        </hgroup>
+
+        <!-- This is a comment in HTML. I can make one by pressing cmd + / in VS Code -->
+        <!-- Comments are not displayed in the browser and are notes for our future selves and colleagues -->
+
+        <!-- Section for Form HTML -->
+        <section>
+            <form>
+                <h2>Your Details:</h2>
+
+                <!-- Text input boxes for first and last name -->
+                <label for="fname">First name:</label><br />
+                <input type="text" id="fname" name="fname" placeholder="First name..."><br />
+
+                <label for="lname">Last name:</label><br />
+                <input type="text" id="lname" name="lname" placeholder="Last name..."><br />
+
+                <h2>Favourite Programming Language</h2>
+
+                <!-- Use radio buttons to choose one option - your favourite language -->
+                <input type="radio" id="html" name="fav_language" value="HTML">
+                <label for="html">HTML</label><br />
+
+                <input type="radio" id="css" name="fav_language" value="CSS">
+                <label for="css">CSS</label><br />
+
+                <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+                <label for="javascript">JavaScript</label>
+
+                <h2>Animals I like</h2>
+
+                <!-- Use checkboxes for multiple choice - your favourite animal(s) -->
+                <input type="checkbox" id="animal1" name="animal1" value="Dog">
+                <label for="animal1"> Dog</label><br />
+
+                <input type="checkbox" id="animal2" name="animal2" value="Cat">
+                <label for="animal2"> Cat</label><br />
+
+                <input type="checkbox" id="animal3" name="animal3" value="Spider">
+                <label for="animal3"> Spider</label><br /><br />
+
+                <input type="submit" value="Submit">
+            </form>
+        </section>
+
+        <!-- HTML for Task Details -->
+        <section>
+            <h2>Your Task</h2>
+
+            <p>You are a freelancer software developer and you need to create a form to collect information from
+                potential
+                clients who would like to request a quote for some work. In order to help you judge the complexity and
+                time
+                requirements, and give an accurate quote, you have set a series of questions to assess the work.</p>
+
+            <ul>
+                <li>Create a new folder for your homework called 'Forms Homework'.</li>
+                <li>Inside the 'Forms Homework' folder create two files:</li>
+                <ul>
+                    <li>index.html</li>
+                    <li>style.css</li>
+                </ul>
+                <li>Create a form that contains the following:</li>
+                <ul>
+                    <Li>Three Input fields for:</Li>
+                    <ol>
+                        <li>Full Name (Should accept text)</li>
+                        <li>Email (Should accept an email)</li>
+                        <li>Phone Number (Should accept a number and not text)</li>
+                    </ol>
+                    <Li>A small list of job-types that allows the user to select one option (e.g. Web Site / Mobile App
+                        / UX
+                        consultancy).
+                    </Li>
+                    <li>A checklist of features they are looking for where the user can select more than one (e.g. Home
+                        Page, Contact Form, Booking System, Shopping Cart, Form, Chatbot)
+                    </li>
+                    <Li>A submit Button</Li>
+                </ul>
+            </ul>
+
+            <h3>Additional Exercises</h3>
+
+            <ul>
+                <li>
+                    A dropdown menu that allows the user to select their location from a selection of options (Include 3
+                    or 4 options, such as Scotland/England/Wales/Ireland)
+                </li>
+                <Li>
+                    A text area for the client to describe the work to be done.
+                </Li>
+                <li>
+                    Add styling of your choice to your form.
+                </li>
+            </ul>
+
+            <h3>Hints</h3>
+
+            <p>
+                We have covered some basic form elements in class, however, <em>you will need to do some further
+                    research</em> into elements we have not covered, as well as the other types that can be used with
+                the
+                elements we discussed earlier.
+            </p>
+            <p>
+                What other types can an input have? How can we incorporate some of them into relevant fields?
+            </p>
+
+            <h4>Resources</h4>
+            <ul>
+                <li>
+                    W3Schools: <a
+                        href="https://www.w3schools.com/html/html_forms.asp">https://www.w3schools.com/html/html_forms.asp</a>
+                </li>
+                <li>
+                    MDN Docs: <a
+                        href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form">https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form</a>
+                </li>
+            </ul>
+        </section>
+    </main>
+</body>
+
+</html>

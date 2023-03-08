@@ -1,0 +1,54 @@
+/* 
+    fonts loaded:
+        Poppins
+            light 300
+            black 900
+        Lora   
+            regular 400
+            regular 400 italic
+
+    color-scheme: https://coolors.co/6b9080-a4c3b2-cce3de-eaf4f4-f6fff8
+*/
+
+* {
+    box-sizing: border-box;
+
+    --colour-1: #6B9080;
+    --colour-2: #A4C3B2;
+    --colour-3: #CCE3DE;
+    --colour-4: #EAF4F4;
+    --colour-5: #F6FFF8;
+}
+
+body {
+    background-color: #F6FFF8;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+#title-box {
+    display: flex;
+    width: auto;
+    height: auto;
+    border-radius: 50px;
+    background: linear-gradient(to bottom right, var(--colour-1), var(--colour-3));
+    justify-content: center;
+    height: 80px;
+}
+
+h1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 900;
+    font-size: 5em;
+    letter-spacing: 0.001;
+    color: var(--colour-5);
+    line-height: 0.8em;
+    text-align: center;
+    display: inline;
+    font: 'Poppins', sans-serif, 900, 5em;
+}
+

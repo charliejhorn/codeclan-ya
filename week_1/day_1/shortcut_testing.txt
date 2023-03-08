@@ -1,0 +1,9 @@
+ctrl + shift + p        command palette
+ctrl + s                sav
+ctrl + q                quit
+ctrl + w                close a tab
+ctrl + alt + arrow      switch between tabs
+ctrl + <number>         specific tab
+ctrl + f                find
+ctrl + shift + f        search project
+...

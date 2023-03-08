@@ -1,0 +1,86 @@
+.green {
+    color: green;
+}
+
+#red {
+    color: red;
+}
+
+.white {
+    color: white;
+}
+
+#blue {
+    background-color: blue;
+}
+
+#colours li:last-child {
+    background-color: purple;
+    color: white;
+}
+
+#bold {
+    font-weight: bold;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.font2 {
+    font-family: monospace;
+}
+
+.bigger {
+    font-size: 1.5em;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.wide {
+    letter-spacing: 0.5em;
+}
+
+.text-shadow {
+    text-shadow: 5px 5px 5px red;
+}
+
+.box-shadow {
+    box-shadow: 5px 5px 5px green;
+}
+
+.small-grey-box-shadow {
+    box-shadow: 2px 2px gray;
+}
+
+.shadows {
+    text-shadow: 10px 3px 5px purple;
+    box-shadow: 3px 10px 5px yellow;
+}
+
+#combination-1 {
+    color: white;
+    font: large sans-serif;
+    letter-spacing: 0.05em;
+    background-color: darkgray;
+    border-radius: 8px;
+    border: 3px solid darkorange;
+    padding: 15px;
+    box-shadow: 10px 10px 10px grey;
+}
+
+#combination-2 {
+    font: large serif;
+    padding: 30px;
+    box-shadow: grey inset 10px 5px 50px 0;
+}
+
+#combination-3 {
+    padding: 2em;
+    border: 3px solid gray;
+    border-radius: 20px;
+    background: linear-gradient(45deg, orange, yellow, darkorange);
+    font: 0.8em cursive;
+}

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="ignore.css">
+  <link rel="stylesheet" href="style.css">
+  <title>Simon Says</title>
+</head>
+
+<body>
+  <!-- Do not edit header -->
+  <header id="page-header">
+    <section>
+      <img src="images/logo_white.png" alt="CodeClan logo in white">
+      <h1>Welcome to CodeClan Simon Says (aka C.S.S)!</h1>
+      <h2>Where a website tells you what to do!</h2>
+    </section>
+    <section>
+      <p>
+        The purpose of this page is to allow people to practice their CSS skills. Below will be a number of elements
+        which
+        will tell you how they want to be styled using CSS. You have been provided a <span class="code">style.css</span>
+        file to write your styling in.
+      </p>
+      <p>
+        Some of these elements will specify that they want to be targeted using a <span class="code">class</span>, an
+        <span class="code">id</span>, or just element selectors.
+      </p>
+      <p>
+        Note: Ignore the <span class="code">ignore.css</span> file; it's used to lay out the page.
+      </p>
+    </section>
+  </header>
+
+  <!-- You can edit beyond this point -->
+  <main>
+    <article id="colours">
+      <h3>Colours</h3>
+      <ul>
+        <li class="green">
+          Make my text green using a class.
+        </li>
+        <li id="red">
+          Make my text red using an id.
+        </li>
+        <li id="blue" class="white">
+          Make my background colour blue and my text white using any kind of selector.
+        </li>
+        <li>
+          Make my background colour purple and my text white using element selectors.
+          <br>(<span class="code">#colours li:last-child { ... }</span>)
+        </li>
+      </ul>
+    </article>
+    <article id="fonts">
+      <h3>Font</h3>
+      <ul>
+        <li id="bold">
+          Make my text bold using an element selector.
+        </li>
+        <li class="italic">
+          Make my text italic using a class.
+        </li>
+        <li class="font2">
+          Make my text a different font using any kind of selector.
+        </li>
+        <li class="bigger">
+          Make my text bigger using a class.
+        </li>
+        <li id="bold" class="font2 underline">
+          Make my text underlined, bold, and a different font using any kind of selector.
+        </li>
+        <li class="wide">
+          Make my <span class="code">letter-spacing</span> wider than normal using any kind of selector.
+        </li>
+      </ul>
+    </article>
+    <article id="shadows">
+      <h3>Shadows</h3>
+
+      <ul>
+        <li class="text-shadow">
+          Give my text a shadow of any colour and size using a class.
+        </li>
+        <li class="box-shadow">
+          Give me a box shadow of any colour and size using a class.
+        </li>
+        <li class="small-grey-box-shadow">
+          Give me a small, tight, grey box shadow using a class.
+        </li>
+        <li class="shadows">
+          Give my text any shadow, and give me any box shadow; using a class.
+        </li>
+      </ul>
+
+      <nav class="doc-links">
+        <h4>Shadow Documentation</h4>
+        <ul>
+          <li>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow">box-shadow</a>
+          </li>
+          <li>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-shadow">text-shadow</a>
+          </li>
+        </ul>
+      </nav>
+    </article>
+    <article id="combos">
+      <h3>Combinations (harder)</h3>
+      <h4>Use classes for all of these. Check the page after each requirement to see what's changed.</h4>
+      <ul>
+        <li id="combination-1">
+          Make my text 'sans-serif' font, large, and white. Increase the letter spacing slightly. Give me a dark grey
+          background. Give me a <span class="code">border-radius</span> of <span class="code">8px</span>. Give me a thin
+          dark orange border. Give me a <span class="code">padding</span> of <span class="code">15px</span>. Give me a
+          grey <span class="code">box-shadow</span>.
+        </li>
+        <li id="combination-2">
+          Make my text large. Make <span class="underline italic">these specific words</span> underlined and italic. Give me a <span
+            class="code">padding</span> of <span class="code">30px</span>. Give me this shadow: <span
+            class="code">box-shadow: grey inset 0 0 15px 0;</span>. Play around with the shadow property values to
+          experiment with the property.
+        </li>
+        <li id="combination-3">Use me as your experiment: play around with properties however you want. I recommend looking into background
+          gradients. The following text exists only to make this element larger so you can better see your stylings:
+          <br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis commodi explicabo, suscipit voluptate
+          officiis et magni obcaecati exercitationem libero dignissimos incidunt voluptas in quae minima aperiam esse
+          assumenda dolorum sint dolores harum expedita tenetur omnis asperiores eaque? Atque architecto at eligendi
+          illo, optio quam tempore sit ex reiciendis. Quos ex saepe modi laboriosam culpa voluptates totam dolor quaerat
+          ratione eveniet!
+        </li>
+      </ul>
+
+      <nav class="doc-links">
+        <h4>Various Documentation</h4>
+        <ul>
+          <li>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border">borders</a>
+          </li>
+          <li>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius">border radius</a>
+          </li>
+          <li>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/gradient/linear-gradient()">gradients</a>
+          </li>
+        </ul>
+      </nav>
+    </article>
+  </main>
+</body>
+
+</html>
