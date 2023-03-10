@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital@0;1&family=Poppins:wght@300;600;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 
+        Create a form that contains the following:
+        Three Input fields for:
+        Full Name (Should accept text)
+        Email (Should accept an email)
+        Phone Number (Should accept a number and not text)
+        A small list of job-types that allows the user to select one option (e.g. Web Site / Mobile App / UX consultancy).
+        A checklist of features they are looking for where the user can select more than one (e.g. Home Page, Contact Form, Booking System, Shopping Cart, Form, Chatbot)
+        A submit Button
+    -->
+    <header>
+        <h1>Contact Me</h1>
+    </header>
+
+    <main>
+        <form>
+            <section id="customer-details">
+                <h2>Your Details</h2>
+                <div class="form-section">
+                    <div class="customer-details-element">
+                        <label class="col1" for="full-name">Full Name</label>
+                        <input class="col2" type="text" name="full-name" id="full-name">
+                    </div>
+                    <div class="customer-details-element">
+                        <label class="col1" for="email">Email</label>
+                        <input class="col2" type="email" name="email" id="email">
+                    </div>
+                    <div class="customer-details-element">
+                        <label class="col1" for="ph-num">Phone Number</label>
+                        <input class="col2" type="number" name="ph-num" id="ph-num">
+                    </div>
+                    <div class="customer-details-element">
+                        <label class="col1" for="state">State</label>
+                        <select class="col2" name="state" id="state">
+                            <option value="">--Please choose a state--</option>
+                            <option value="NSW">New South Wales</option>
+                            <option value="NT">Northern Territory</option>
+                            <option value="QZ">Queensland</option>
+                            <option value="SA">South Australia</option>
+                            <option value="ACT">Australian Capital Territory</option>
+                            <option value="TA">Tasmania</option>
+                            <option value="VIC">Victoria</option>
+                            <option value="WA">Western Australia</option>
+                        </select>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="job-type">
+                <h2>What are you looking for?</h2>
+                <div id="job-type-options">
+                    <label class="job-type-box grid-a" for="web-site">Web Site</label>
+                    <input class="job-type-box grid-a button" type="radio" name="job-type" id="web-site">
+                
+                    <label class="job-type-box grid-b" for="seo">SEO Optimisation</label>
+                    <input class="job-type-box grid-b button" type="radio" name="job-type" id="seo">
+                
+                    <label class="job-type-box grid-c" for="ux-consultancy">UX Consultancy</label>
+                    <input class="job-type-box grid-c button" type="radio" name="job-type" id="ux-consultancy">
+                
+                    <label class="job-type-box grid-d" for="mobile-app">Mobile App</label>                    
+                    <input class="job-type-box grid-d button" type="radio" name="job-type" id="mobile-app">
+                </div>
+                <!--
+                <div id="job-type-options">
+                    <div class="job-type-container">
+                        <label class="job-type-box" for="web-site">Web Site</label>
+                        <input class="job-type-box button" type="radio" name="job-type" id="web-site">
+                    </div>
+                    <div class="job-type-container">
+                        <label class="job-type-box" for="seo">SEO Optimisation</label>
+                        <input class="job-type-box button" type="radio" name="job-type" id="seo">
+                    </div>
+                    <div class="job-type-container">
+                        <label class="job-type-box" for="ux-consultancy">UX Consultancy</label>
+                        <input class="job-type-box button" type="radio" name="job-type" id="ux-consultancy">
+                    </div>
+                    <div class="job-type-container">
+                        <label class="job-type-box" for="mobile-app">Mobile App</label>                    
+                        <input class="job-type-box button" type="radio" name="job-type" id="mobile-app">
+                    </div>
+                </div>
+                -->
+                
+                
+
+                <!-- 
+                    <div class="job-type-container" id="radio-labels-container">
+                        <label class="job-type-box" for="web-site">Web Site</label>
+                        <label class="job-type-box" for="seo">SEO Optimisation</label>
+                        <label class="job-type-box" for="ux-consultancy">UX Consultancy</label>
+                        <label class="job-type-box" for="mobile-app">Mobile App</label>
+                    </div>
+                    <div class="job-type-container" id="radio-inputs-container">
+                        <input class="job-type-box button" type="radio" name="job-type" id="web-site">
+                        <input class="job-type-box button" type="radio" name="job-type" id="seo">
+                        <input class="job-type-box button" type="radio" name="job-type" id="ux-consultancy">
+                        <input class="job-type-box button" type="radio" name="job-type" id="mobile-app">
+                    </div>
+                -->
+            </section>
+
+            <section id="job-features">
+                <h2>What features are you requiring?</h2>
+                <input type="checkbox" name="features" id="home">
+                <label for="home">Home page</label><br>
+                
+                <input type="checkbox" name="features" id="contact">
+                <label for="contact">Contact form</label><br>
+
+                <input type="checkbox" name="features" id="booking">
+                <label for="booking">Booking system</label><br>
+
+                <input type="checkbox" name="features" id="cart">
+                <label for="cart">Shopping Cart</label><br>
+
+                <input type="checkbox" name="features" id="form">
+                <label for="form">Form</label><br>
+
+                <input type="checkbox" name="features" id="chatbot">
+                <label for="chatbot">Chatbot</label><br>
+            </section>
+
+            <section id="job-description">
+                <h2>Briefly describe the details of your project</h2>
+                <input type="text" name="description" id="description">
+            </section> 
+            
+
+            <br>
+            <section id="submit-section">
+                <input type="submit" name="submit" id="submit" value="SUBMIT" cli>
+            </section>
+
+        </form>
+    </main>
+    
+</body>
+</html>

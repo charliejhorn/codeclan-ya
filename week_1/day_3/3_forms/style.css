@@ -1,0 +1,224 @@
+/* 
+   lora:    400, 400 italic
+   poppins: 300, 600, 900
+*/
+
+body {
+    --dark-blue: #173753;
+    --light-blue: #6DAEDB;
+    --medium-blue: #2892D7;
+    --yellow: #FFE74C;
+
+    background-color: var(--light-blue);
+    padding: 2rem 6rem;
+    font-family: "Poppins";
+    font-weight: 300;
+    box-sizing: border-box;
+}
+
+main {
+    background: var(--dark-blue);
+    color: white;
+    padding: 5rem;
+    padding-top: 3rem;
+    border-radius: 40px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+}
+
+input {
+    background-color: white;
+}
+
+h1 {
+    font-family: "Poppins";
+    font-weight: 900;
+    font-size: 4em;
+    color: white;
+    text-align: center;
+}
+
+h2 {
+    font-family: "Poppins";
+    font-weight: 600;
+    padding-bottom: 0;
+    padding-top: 0;
+    color: white;
+}
+
+#description {
+    width: 100%;
+    height: 6rem;
+}
+
+.customer-details-element {
+    display: grid;
+    grid-template-columns: 10rem 15rem;
+}
+
+.col1 {
+    grid-column: 1;
+}
+
+.col2 {
+    grid-column: 2;
+}
+
+.form-section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+input, select, option:hover, label {
+    cursor: pointer;
+}
+
+.customer-details-element > input, #job-description > input {
+    cursor: text;
+}
+
+
+
+#job-type-options {
+}
+
+#job-type-options {
+    --job-type-container-gap: 20px;
+
+    display: grid;
+    grid-template-columns: repeat(4, calc(25% - var(--job-type-container-gap) * 3 / 4));
+    grid-template-rows: 6rem 6rem;
+    grid-template-areas: 
+        "a b c d";
+    width: 100%;
+    gap: var(--job-type-container-gap);
+}
+
+.job-type-box {
+    margin: 0px;
+    width: 100%;
+    height: 100%;
+    margin: 0px;    
+}
+
+.grid-a { grid-area: a; }
+.grid-b { grid-area: b; }
+.grid-c { grid-area: c; }
+.grid-d { grid-area: d; }
+
+#job-type-options > label {
+    background-color: transparent;
+    z-index: 2;
+    color: var(--medium-blue);
+    font-weight: 600;
+    text-align: center;
+}
+
+#job-type-options > label:hover {
+    color: white;
+    scale: 1.1;
+}
+
+#job-type-options > input {
+    appearance: none;
+    background-color: white;
+    border-radius: 1rem;
+    z-index: 1;
+    font-size: 1.5em;
+}
+
+#job-type-options > input:checked {
+    background-color: var(--medium-blue);
+    animation: clicked 0.3s 1;
+}
+
+#job-type-options > input:hover {
+    background-color: var(--medium-blue);
+    scale: 1.1;
+    transition: 0.1s;
+}
+
+/*
+.job-type-container {
+    --job-type-container-gap: 20px;
+
+    display: flex;
+    gap: var(--job-type-container-gap);
+    width: 100%;
+}
+
+.job-type-container > label {
+    background-color: transparent;
+}
+
+.job-type-container > input {
+    appearance: none;
+    background-color: white;
+    border-radius: 1rem;
+}
+
+.job-type-container > input:checked {
+    background-color: var(--medium-blue);
+    animation: clicked 0.3s 1;
+}
+
+.job-type-container > input:hover {
+    background-color: var(--medium-blue);
+    scale: 1.1;
+    transition: 0.1s;
+}
+
+#radio-labels-container {
+    position: absolute;
+}
+
+
+#radio-inputs-container {
+
+}
+
+.job-type-box {
+    margin: 0px;
+    width: calc(25% - calc(var(--job-type-container-gap) / 3));
+    height: 6rem;
+    margin: 0px;    
+}
+*/
+
+@keyframes clicked {
+    50% { scale: 0.95; }
+    100% { scale: 1.1; }
+}
+
+
+
+#submit {
+    width: 14rem;
+    height: 4rem;
+    border-radius: 2rem;
+    border: 0px;
+    font-family: "Poppins";
+    font-weight: 900;
+    font-size: 2rem;
+    color: var(--medium-blue);
+}
+
+#submit:hover {
+    background-color: var(--medium-blue);
+    color: white;
+    cursor: pointer;
+    scale: 1.1;
+    transition: 0.1s
+}
+
+#submit-section {
+    display: flex;
+    align-content: center;
+}
+
