@@ -1,0 +1,17 @@
+Part 1 - first week
+Section A
+Pick from any of the given project briefs
+Score Board
+Shop inventory
+Travel bucket list
+Music App
+Create a detailed plan
+Draw the wireframes
+Give a list example to show it follows accessibility guidelines
+Give a list of SEO and UX principles that were considered while planning the project
+Section B - HTML & CSS
+Create a basic introduction page for your project
+Add text, image and more multimedia elements
+Create a form to input name
+Create a submit button
+Style it with css
