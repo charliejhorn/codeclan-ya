@@ -34,6 +34,11 @@ body > main {
     margin: 3rem;
 }
 
+#author-container {
+    display: flex;
+    /* intrinsic sizing */
+}
+
 #author {
     padding: 1rem;
     border: 2px dashed #dfdddd;
