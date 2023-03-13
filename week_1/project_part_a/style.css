@@ -28,6 +28,10 @@ header {
     background: var(--eggshell);
 }
 
+header * {
+    color: var(--night-black);
+}
+
 #bucket-bounds-text {
     text-decoration: none;
 }
@@ -36,15 +40,12 @@ header h1 {
     margin: 0px;
     padding: 1rem;
     height: min-content;
-
     font: 2.8em 'Yeseva One', cursive;
-    color: var(--night-black);
     letter-spacing: 0.1em;
 }
 
 .header-nav-link a {
     font: 1.4em 'Josefin Sans', cursive;
-    color: var(--night-black);
     letter-spacing: 0.05em;
     text-decoration: none;
 }
@@ -75,7 +76,15 @@ header > nav {
 #nav-profile {
     display: flex;
     align-items: center;
-    padding: 1rem 1rem;
+    aspect-ratio: 1 / 1;
+    padding: 1rem;
+}
+
+#nav-profile > a {
+    padding: 0.5rem;
+    height: 3.5rem;
+    width: 3.5rem;
+
     aspect-ratio: 1 / 1;
 }
 
@@ -83,6 +92,7 @@ header > nav {
     aspect-ratio: 1 / 1;
     width: 2.5rem;
 }
+
 
 
 main {
@@ -124,11 +134,14 @@ main > form > input[type=text] {
     font-weight: 300;
     text-align: center;
     margin-top: 0.5em;
-    height: calc(min-content + 1px)
+    height: calc(min-content + 1px);
+    padding: 0px;
+    padding-bottom: 1px;
 }
 
 main > form > input[type=text]:hover {
-    border-width: 2px;
+    padding-bottom: 0px;
+    border-bottom: 2px solid var(--night-black);
 }
 
 main > form > input[type=text]:focus {
