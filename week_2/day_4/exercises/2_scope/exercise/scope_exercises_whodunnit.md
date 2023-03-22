@@ -28,6 +28,8 @@ const verdict = declareMurderer();
 console.log(verdict);
 ```
 
+'The murderer is Miss Scarlet'
+
 #### Episode 2
 
 ```js
@@ -46,6 +48,8 @@ const verdict = declareMurderer();
 console.log(verdict);
 ```
 
+'The murderer is Mrs. Peacock'
+
 #### Episode 3
 
 ```js
@@ -63,6 +67,10 @@ const secondVerdict = `The murderer is ${murderer}.`;
 console.log('Second Verdict: ', secondVerdict);
 ```
 
+'First Verdict: The murderer is Mrs. Peacock'
+
+'Seconf Verdict: The murderer is Professor Plum'
+
 #### Episode 4
 
 ```js
@@ -79,6 +87,10 @@ const suspects = declareAllSuspects();
 console.log(suspects);
 console.log(`Suspect three is ${suspectThree}.`);
 ```
+
+'The suspects are Miss Scarlet, Professor Plum, Colonel Mustard'
+
+'Suspect three is Mrs. Peacock'
 
 #### Episode 5
 
@@ -101,6 +113,8 @@ changeWeapon('Revolver');
 const verdict = declareWeapon();
 console.log(verdict);
 ```
+
+'The weapon is the Revolver'
 
 #### Episode 6
 
@@ -125,6 +139,8 @@ changeMurderer();
 const verdict = declareMurderer();
 console.log(verdict);
 ```
+
+'The murderer is Mrs. White'
 
 #### Episode 7
 
@@ -155,6 +171,10 @@ changeMurderer();
 const verdict = declareMurderer();
 console.log(verdict);
 ```
+
+'The murderer is Miss Scarlet'
+
+ *'The murderer is Mr. Green'*
 
 #### Episode 8
 
@@ -195,6 +215,8 @@ const verdict = declareWeapon();
 console.log(verdict);
 ```
 
+'The weapon is Candle Stick'
+
 #### Episode 9
 
 ```js
@@ -212,6 +234,56 @@ const verdict = declareMurderer();
 console.log(verdict);
 ```
 
+'The murderer is Professor Plum'
+
 ### Extensions
 
 Make up your own episode!
+
+```js
+const scenario = {
+  murderer: 'Kermit the Frog',
+  room: "Shrek's Shack",
+  weapon: 'Deadly Banjo'
+};
+
+const gameplay = function(game) {
+    if (game.murderer === 'Kermit the Frog') {
+        console.log('Kermit is not good enough');
+        game.murderer = 'James';
+    }
+    
+    const changeWeapon = function() {
+        if (game.murderer === 'Kermit the Frog') {
+            game.weapon = 'Miss Piggy'
+        } else if (game.murderer === 'James') {
+            let game.weapon = 'CodeClan Duck'
+        }
+        if (game.room === 'Rainbow Road') {
+            game.weapon = 'Nimbus 2000'
+        }
+    }
+
+    changeWeapon()
+    
+    let game.room = 'Rainbow Road';
+
+    if (game.room === 'Rainbow Road') {
+        game.murderer = 'Waluigi';
+    }
+
+    let game.weapon = 'Lightsaber'
+
+    changeWeapon()
+
+    return game   
+}
+
+verdict = function(game) {
+    gameplay(game)
+    console.log('Murderer is ${game.murderer});
+    console.log('Room is ${game.room});
+    console.log('Weapon is ${game.weapon});
+}
+console.log(verdict(game))
+```
