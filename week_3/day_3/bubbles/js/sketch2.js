@@ -36,28 +36,7 @@ function createBubbles( num, maxRadius, maxSpeed ) {
 }
 
 function createBubble( xPos, yPos, radius, bubbleSpeed, minMaxPos ) {
-  return {
-    x: xPos,
-    y: yPos,
-    radius: radius,
-    minMaxPos: minMaxPos,
-    bubbleSpeed: bubbleSpeed,
-    bubbleColour: randomColour(),
-    draw: function() {
-      fill(this.bubbleColour);
-      stroke(220);
-      ellipse(this.x, this.y, this.radius * 2);
-      fill(255);
-      ellipse(this.x + this.radius / 4, this.y - this.radius / 4, this.radius / 8
-      );
-    },
-    move: function() {
-        if( this.y < this.minMaxPos.minY || this.y > this.minMaxPos.maxY ) {
-            this.bubbleSpeed = -this.bubbleSpeed
-        }
-        this.y -= this.bubbleSpeed
-    }
-  };
+  vectorX
 }
 
 function randomColour() {

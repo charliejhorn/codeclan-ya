@@ -13,11 +13,15 @@ body {
     --tea-green: #C8D5B9;
     --cambridge-blue: #8FC0A9;
     --night-black: #00120B;
-    --taupe-grey: #605760;
+    --taupe-grey: #5f5f5f;
     --button-transition: 0.2s;
     --header-nav-height: 5rem;
 
     margin: 0px;
+}
+
+h1, h2 {
+    margin: 0;
 }
 
 header {
@@ -67,7 +71,7 @@ header h1 {
 }
 
 .header-nav-link a {
-    font: 1.4em 'Josefin Sans', cursive;
+    font: 1.4em 'Josefin Sans', sans-serif;
     letter-spacing: 0.05em;
     text-decoration: none;
 }
@@ -116,7 +120,8 @@ header > nav {
 }
 
 main {
-    margin: none;
+    margin: 0;
+    padding: 1rem;
 }
 
 main * {
@@ -239,12 +244,71 @@ h2 {
 }
 
 
-
-#location-details {
+#destination-page {
     display: grid;
+    grid-template-columns: 6fr 4fr;
+    gap: 10px;
 }
 
-.container {
-    background-color: var(--eggshell);
+#destination-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 4rem 3rem 3rem 15rem;
+    gap: 0.5rem;
+    grid-template-areas: 
+        "title title"
+        "country city"
+        "category ."
+        "description description";
+
+    background-color: var(--tea-green);
+    padding: 1rem;
+    border-radius:0.5rem;
+    font-size: 1em;
+}
+
+.destination-container {
+    /* background-color: var(--eggshell);
     border-radius: 0.5em;
+    border: 3px dashed gray; */
+    display: flex;
+    align-items: center;
+}
+
+#destination-page h1{
+    font-weight: 500;
+    letter-spacing: -0.1em;
+}
+
+#destination-page h2{
+    font-weight: 400;   
+}
+
+#destination-title-container {
+    grid-area: title;
+    font-size: 2em;
+}
+
+#destination-country-container {
+    grid-area: country;
+}
+
+#destination-city-container {
+    grid-area: city;
+}
+
+#destination-category-container {
+    grid-area: category;
+}
+
+#destination-description-container {
+    grid-area: description;
+    display: block;
+}
+
+
+#destination-images .destination-container{
+    aspect-ratio: 1/1;
+    background-color: var(--taupe-grey);
+    border-radius: 0.5rem;
 }
