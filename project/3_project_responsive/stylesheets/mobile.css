@@ -1,0 +1,58 @@
+@media screen and (width < 1000px) {
+    #header-nav-links-container {
+        gap: 0;
+    }
+}
+
+@media screen and (455px < width < 900px) {
+    body {
+        --header-nav-height: 7rem;
+    }
+
+    header {
+        flex-direction: column;
+        padding-top: 0px;
+    }
+
+    #header-title-container {
+        width: 300px;
+    }
+
+    #nav-profile-container {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+    }
+
+    #header-nav-links-container {
+        gap: 0.5rem;
+    }
+}
+
+@media screen and (width > 455px) {
+    #bottom-nav-bar {
+        display: none;
+    }
+}
+
+@media screen and (width <= 455px) {
+    #header-nav-container, #nav-profile-container {
+        display: none;
+    }
+    
+    body {
+        --header-nav-height: 4rem;
+    }
+
+    header {
+        justify-content: center;
+    }
+
+    #header-title-container {
+        width: auto;
+    }
+    
+    #bottom-nav-bar {
+        position: fixed;
+    }
+}
