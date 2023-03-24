@@ -36,6 +36,9 @@
     }
 }
 
+
+/* MOBILE BELOW */
+
 @media screen and (width <= 455px) {
     #header-nav-container, #nav-profile-container {
         display: none;
@@ -56,4 +59,14 @@
     #bottom-nav-bar {
         position: fixed;
     }
+
+    footer {
+        margin-bottom: var(--bottom-nav-height);
+    }
+
+
+
+    /* DESTINATION-VIEW */
+
+    /* #destination-details {} */
 }

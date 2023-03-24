@@ -1,0 +1,14 @@
+body {
+    margin: 0;
+    padding: 2rem;
+    background: lightsteelblue;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: larger;
+}
+
+section {
+    border: 1px dashed darkblue;
+    margin: 3rem;
+    border-radius: 2rem;
+    padding: 1rem;
+}

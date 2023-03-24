@@ -2,7 +2,7 @@ let bubbles;
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  frameRate(30);
+  frameRate(60);
   createBubbles(200, 50, 5)
   console.log(bubbles);
 }

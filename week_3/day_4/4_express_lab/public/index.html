@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Never-To-Do List</title>
+    <script src="js/app.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <section id="form-container">
+        <form id="order-form">
+            <div class="form-item">
+                <label for="customer-name">Name</label>
+                <input type="text" name="customer-name">
+            </div>
+            <div class="form-item">
+                <label for="order-date">Date</label>
+                <input type="text" name="order-date">
+            </div>
+            <div class="form-item">
+                <label for="item-name">Item</label>
+                <input type="text" name="item-name">
+            </div>
+            <div class="form-item">
+                <label for="order-quantity">Quantity</label>
+                <input type="text" name="order-quantity">
+            </div>
+            <div class="form-item">
+                <input type="submit" id="submit">
+            </div>
+        </form>
+    </section>
+    <section id="orders-conatiner">
+        <h1>Shop Orders</h1>
+        <ul id="orders-list"></ul>
+    </section>
+
+
+</body>
+</html>

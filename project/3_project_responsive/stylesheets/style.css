@@ -16,6 +16,7 @@ body {
     --taupe-grey: #5f5f5f;
     --button-transition: 0.2s;
     --header-nav-height: 5rem;
+    --bottom-nav-height: 4.5rem;
 
     margin: 0px;
 }
@@ -23,6 +24,8 @@ body {
 h1, h2 {
     margin: 0;
 }
+
+
 
 /* HEADER BELOW */
 
@@ -49,7 +52,6 @@ header * {
 
 #bucket-bounds-logo {
     text-decoration: none;
-    border-radius: 0.5em;
     display: inline-block;
     height: 100%;
     width: 100%;
@@ -88,12 +90,12 @@ header * {
     text-decoration: none;
 }
 
-#header-nav-container a, #bottom-nav-bar a {
+header a {
     border-radius: 0.5em;
     padding: 0.3em;
 }
 
-#header-nav-container a:hover, #bottom-nav-bar a:hover {
+header a:hover {
     background: var(--cambridge-blue);
     transition: var(--button-transition);
 }
@@ -108,7 +110,7 @@ header * {
     padding: 0.5rem;
     height: 3.5rem;
     width: 3.5rem;
-
+    margin-left: 0.25em;
     aspect-ratio: 1 / 1;
 }
 
@@ -122,7 +124,7 @@ header * {
 /* BOTTOM NAV BAR */
 
 #bottom-nav-bar {
-    height: 4.5rem;
+    height: var(--bottom-nav-height);
     bottom: 0px;
     width: 100%;
     background-color: var(--eggshell);
@@ -148,12 +150,15 @@ header * {
 
 main {
     margin: 0;
-    padding: 1rem;
 }
 
 main * {
     font-family: 'Josefin Sans', cursive;
     color: var(--night-black);
+}
+
+#home-page-main {
+    padding: 2rem;
 }
 
 #home-hello-form {
@@ -232,7 +237,8 @@ footer {
 
 
 
-/* DESTINATION VIEW PAGE */
+
+/* COUNTRY-TEMPLATE PAGE */
 
 #location-img-section {
     height: calc(100vh - var(--header-nav-height));
@@ -283,6 +289,9 @@ footer {
     aspect-ratio: 3 / 2;
 }
 
+
+
+/* DESTINATION-VIEW PAGE */
 
 #destination-page {
     display: grid;
@@ -352,3 +361,60 @@ footer {
     background-color: var(--taupe-grey);
     border-radius: 0.5rem;
 }
+
+
+/* MOBILE DESTINATION-VIEW
+    - overwriting some of the above for new layout
+*/
+#destination-page {
+    display: block;
+}
+
+#destination-img-details-container {
+    height: calc(100vh - var(--header-nav-height) - var(--bottom-nav-height));
+    background-color: var(--cambridge-blue);
+    position: relative;
+}
+
+#destination-img-carousel-container {
+    height: 100%;
+    position: relative;
+}
+
+#destination-img-carousel-controls {
+    position: absolute;
+    bottom: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.destination-img-carousel-control {
+    aspect-ratio: 1/1;
+    height: 2rem;
+    background-color: var(--taupe-grey);
+}
+
+#destination-details-container {
+    position: absolute;
+    bottom: 0;
+
+}
+
+#destination-edit-button-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    aspect-ratio: 1/1;
+    width: 3rem;
+    background-color: var(--taupe-grey);
+    border-radius: 1rem;
+}
+
+#destination-category-container {
+    position: absolute;
+    top: 0;
+}
+
+
+
