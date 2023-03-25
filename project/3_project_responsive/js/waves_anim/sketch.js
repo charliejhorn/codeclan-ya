@@ -6,7 +6,7 @@
       yPos: #,
       yMin: #,
       yMax: #,
-      waveVelocity: {
+      velocity: {
         speed: #,
         direction: -1 or 1,
       }
@@ -26,19 +26,37 @@
   ]
 */
 
-const waves = []
+const waves = [];
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
 
   // numOfWaves, waveSpeed, waveMotionRadius, waveWidth, waveColour, waveWeight, nodesPerWave, nodeSpeed
-  createWaves(10, 1, 20, 25, 'darkblue', 10, 10, 1)
+  createWaves( 1, 0.3, 50, 50, 'darkblue', 10, 15, 1 )
 
-  frameRate(60)
+  frameRate(30)
 }
 
 function draw() {
   background('lightblue');
+
+  
+  // move nodes in each wave
+  for(let wave of waves) {
+    moveNodes(wave)
+  }
+
+  // wave lines
+  for(let wave of waves) {
+    strokeWeight(2)
+    stroke('green')
+    line(0, wave.yMin, width, wave.yMin);
+    line(0, wave.yMax, width, wave.yMax);
+  }
+  
+  // move waves
+  // moveWaves()
+
 
   // draw all nodes
   for(let wave of waves) { 
@@ -51,25 +69,27 @@ function draw() {
   for(let wave of waves) {
     drawWaveCurves(wave)
   }
-
-  // move nodes in each wave
-  for(let wave of waves) {
-    // moveNodes(wave)
-  }
-
-  // move waves
-  moveWaves()
 }
 
 function moveWaves() {
   for(let wave of waves) {
-    // change direction if needed
-    // console.log(wave.waveVelocity);
-    wave.waveVelocity.direction = checkChangeDirection(wave.yPos, wave.yMin, wave.yMax, wave.waveVelocity.direction)
+    // updating yPos of waves
+    let yChange = (wave.velocity.speed * wave.velocity.direction);
 
+    
     // move according to direction and speed
-    wave.yPos += (wave.waveVelocity.speed * wave.waveVelocity.direction)
+    wave.yPos += yChange;
+    
+    // change direction (if needed)
+    wave.velocity.direction = checkChangeDirection(wave.yPos, wave.yMin, wave.yMax, wave.velocity.direction);
+
+
+    // updating yPos of nodes of wave
+    for(let node of wave.nodes) {
+      node.yPos += yChange;
+    }
   }
+
 }
 
 function drawWaveCurves(wave) {
@@ -83,8 +103,8 @@ function drawWaveCurves(wave) {
     const endPoint = [wave.nodes[index + 1].xPos, wave.nodes[index + 1].yPos]
 
     // create control points
-    const startControl = [ startPoint[0]-50, startPoint[1]-50 ]
-    const endControl = [ endPoint[0]+50, endPoint[1]-50 ]
+    const startControl = [ startPoint[0]-100, startPoint[1]-100 ]
+    const endControl = [ endPoint[0]+100, endPoint[1]-100 ]
     // console.log('start', startPoint, 'end', endPoint);
 
     // draw curve
@@ -99,10 +119,23 @@ function moveNodes(wave) {
       node.velocity.direction = -node.velocity.direction;
     } */
 
-    node.velocity.direction = checkChangeDirection(node.yPos, node.yMin, node.yMax, node.velocity.direction)
+    if ( checkChangeDirection( node.yPos, node.yMin, node.yMax ) == true ) {
+      node.velocity.direction = -node.velocity.direction
 
-    // move node
-    node.yPos += (node.velocity.speed * node.velocity.direction);
+      // reset position to either max or min
+      if ( node.yPos < node.yMin ) {
+        node.yPos = node.yMin + 1;
+      } else if ( node.yPos > node.yMax ) {
+        node.yPos = node.yMax - 1;
+      }
+    }
+
+    // move node according to wave.velocity.direction
+    if( wave.velocity.direction === node.velocity.direction ) {
+      node.yPos += (node.velocity.speed * node.velocity.direction);
+    } else {
+      node.yPos += (node.velocity.speed * node.velocity.direction);
+    }
   } 
 }
 
@@ -121,14 +154,14 @@ function createWave( yPos, waveSpeed, waveMotionRadius, waveWidth, waveColour, w
   wave.yPos = yPos;
   wave.yMin = yPos - waveMotionRadius;
   wave.yMax = yPos + waveMotionRadius;
-  wave.waveVelocity = {
+  wave.velocity = {
     speed: waveSpeed,
   }
-  // wave.velocity alternate directions per WAVE
+  // wave.velocity alternate direction per WAVE
   if(waves.length % 2 === 0) {
-    wave.waveVelocity.direction = 1;
+    wave.velocity.direction = 1;
   } else {
-    wave.waveVelocity.direction = -1
+    wave.velocity.direction = -1
   }
 
 
@@ -172,11 +205,11 @@ function createWave( yPos, waveSpeed, waveMotionRadius, waveWidth, waveColour, w
   console.log('wave:', wave);
 }
 
-function checkChangeDirection(pos, min, max, direction) {
+function checkChangeDirection(pos, min, max) {
   if( pos < min || pos > max ) {
-    return -direction;
+    return true;
   } else {
-    return direction;
+    return false;
   }
 }
 
