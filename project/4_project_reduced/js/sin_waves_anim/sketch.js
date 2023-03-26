@@ -145,7 +145,7 @@ function createWave( yPos, intialYPos, waveMotionRadius, waveSpeed, colour, weig
   wave.nodes = [];
 
   // create nodes for wave.nodes
-  for(let i = 0; i < width / 10; i++) {
+  for(let i = 0; i < nodesPerWave; i++) {
     let node = {};
     node.xPos = (width / (nodesPerWave-1)) * i;;
     node.yPos = yPos;
