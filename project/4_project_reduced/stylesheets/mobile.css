@@ -37,6 +37,8 @@
     
     body {
         --header-nav-height: 4rem;
+
+        --main-content-height: calc( 100vh - var(--header-nav-height) - var(--bottom-nav-height) );
     }
 
     header {

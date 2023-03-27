@@ -15,42 +15,49 @@
     
 </head>
 <body>
-    <script src="..js/app.js"></script>
+    <script src="../js/app.js"></script>
     <script src="../components/header.js"></script>
     <script src="../components/bottom-nav.js"></script>
     <script src="../components/footer.js"></script>
 
     <header-component></header-component>  
 
-    <main id="destination-edit-main">
-        <h1>Create a new destination</h1>
-        <section>
-            <form action="">
+    <main id="destination-create-main">
+        <h1>Create your new destination</h1>
+        <section id="destination-create-form-container">
+            <form id="destination-create-form" name="destination-create">
                 <div class="form-item">
-                    <label for="destination-title">Destination Title</label>
-                    <input type="text" name="destination-title" id="destination-title">
+                    <label for="destination-name">name</label>
+                    <input type="text" name="destination_name" id="destination-name" required>
                 </div>
                 <div class="form-item">
-                    <label for="destination-country">Destination Country</label>
-                    <input type="text" name="destination-country" id="destination-country">
+                    <label for="destination-country">country</label>
+                    <input type="text" name="destination_country" id="destination-country" required>
                 </div>
                 <div class="form-item">
-                    <label for="destination-city">Destination City</label>
-                    <input type="text" name="destination-city" id="destination-city">
+                    <label for="destination-city">city</label>
+                    <input type="text" name="destination_city" id="destination-city" required>
                 </div>
                 <div class="form-item">
-                    <label for="destination-type">Destination Type</label>
-                    <input type="text" name="destination-type" id="destination-type">
+                    <label for="destination-type">destination type</label>
+                    <input type="text" name="destination_type" id="destination-type" required>
                 </div>
                 <div class="form-item">
-                    <label for="destination-description">Destination Description</label>
-                    <input type="text" name="destination-description" id="destination-description">
+                    <label for="destination-description">description</label>
+                    <input type="text" name="destination_description" id="destination-description" required>
                 </div>
                 <div class="form-item">
-                    <label for="destination-image">Destination Image</label>
-                    <input type="text" name="destination-image" id="destination-image">
+                    <label for="destination-image">image link</label>
+                    <input type="text" name="destination_image" id="destination-image" required>
+                </div>
+                <div class="form-item">
+                    <input type="submit" id="destination-submit">
                 </div>
             </form>
+        </section>
+        <section>
+            <ul id="form-response">
+            </ul>
         </section>
     </main>
 
