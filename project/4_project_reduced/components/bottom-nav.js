@@ -11,7 +11,7 @@ class BottomNav extends HTMLElement {
                         <span class='bottom-nav-bar-icon material-symbols-outlined' alt="browse destinations icon">
                             travel_explore
                         </span>
-                        <h6 class='bottom-nav-bar-link'>browse</h6>
+                        <h6 class='bottom-nav-bar-text'>browse</h6>
                     </a>
                 </div>
                 <div class="bottom-nav-bar-link-container">
@@ -19,7 +19,7 @@ class BottomNav extends HTMLElement {
                         <span class='bottom-nav-bar-icon material-symbols-outlined' alt="browse destinations icon">
                             add_location
                         </span>
-                        <h6 class='bottom-nav-bar-link'>create</h6>
+                        <h6 class='bottom-nav-bar-text'>create</h6>
                     </a>
                 </div>
             </nav>

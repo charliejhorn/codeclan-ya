@@ -111,10 +111,15 @@ class Header extends HTMLElement {
             <nav id="header-nav">
                 <section id="header-nav-links-container">
                     <a class="header-nav-link" href="#">
+                        <span class='header-nav-bar-icon material-symbols-outlined' alt="browse destinations icon">
+                            travel_explore
+                        </span>
                         <h6>browse destinations</h6>
                     </a>
                     <a class="header-nav-link" href="destination.html">
-                        
+                        <span class='header-nav-bar-icon material-symbols-outlined' alt="browse destinations icon">
+                            add_location
+                        </span>
                         <h6>create a destination</h6>
                     </a>
                     

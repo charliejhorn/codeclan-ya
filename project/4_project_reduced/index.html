@@ -18,18 +18,30 @@
     <script src="components/header.js"></script>
     <script src="components/bottom-nav.js"></script>
     <script src="components/footer.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.6/p5.js"></script>
+    <script src="js/sin_waves_anim_2/sketch.js"></script>
     <header-component></header-component>   
 
     <main id="home-page-main">
-        <section id="home-hello-form">
-            <h2>Hello!</h2>
-            <form id="" autocomplete="off">
-            <label for="name">first name</label>
-            <input type="text" name="name" id="name">
-            <br>
-            <input type="submit" name="submit" id="submit">
-        </form>
-        </section>
+        <div id="home-page-anim-canvas"></div>
+
+        <div id="home-intro-container">
+            <h1>Save Your Travel Bucket List</h1>
+            <section id="home-intro-buttons-container">
+                <a class="home-intro-anchor" href="destination-list.html">
+                    <span id='travel-explore-icon'class='home-intro-icon material-symbols-outlined' alt="browse destinations icon">
+                        travel_explore
+                    </span>
+                    <h2>View your saved destination bounds</h2>
+                </a>  
+                <a class="home-intro-anchor" href="html/destinations/destination-view-mobile.html">
+                    <span id="add-location-icon" class='home-intro-icon material-symbols-outlined' alt="browse destinations icon">
+                        add_location
+                    </span>
+                    <h2>Create a new destination bound</h2>
+                </a>
+            </section>
+        </div>
     </main>
 
     <footer-component></footer-component>

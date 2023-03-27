@@ -1,10 +1,4 @@
-@media screen and (width < 1000px) {
-    #header-nav-links-container {
-        gap: 0;
-    }
-}
-
-@media screen and (510px < width < 900px) {
+@media screen and (540px < width < 900px) {
     body {
         --header-nav-height: 7rem;
     }
@@ -17,13 +11,9 @@
     #header-title-container {
         width: 300px;
     }
-
-    #header-nav-links-container {
-        gap: 0.5rem;
-    }
 }
 
-@media screen and (width > 510px) {
+@media screen and (width > 540px) {
     #bottom-nav-bar {
         display: none;
     }
@@ -32,7 +22,7 @@
 
 /* MOBILE BELOW */
 
-@media screen and (width <= 510px) {
+@media screen and (width <= 540px) {
     #header-nav-container {
         display: none;
     }
@@ -62,4 +52,15 @@
     /* DESTINATION-VIEW */
 
     /* #destination-details {} */
+}
+
+@media screen and (width <= 350px) {
+    .bottom-nav-bar {
+        
+        gap: 0.1rem;
+    } 
+
+    .bottom-nav-bar-link-container {
+        width: auto;
+    }
 }

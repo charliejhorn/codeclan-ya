@@ -24,10 +24,16 @@
 const waves = [];
 
 function setup() {
-  createCanvas(windowWidth, windowHeight);
+  const canvasDiv = document.querySelector('#home-page-anim-canvas');
+  console.log(canvasDiv.offsetHeight);
+  const canvasWidth = canvasDiv.offsetWidth;
+  const canvasHeight = canvasDiv.offsetHeight;
+  const sketchCanvas = createCanvas(canvasWidth, canvasHeight);
+  console.log(sketchCanvas);
+  sketchCanvas.parent(canvasDiv);
 
   // numOfWaves, waveMotionRadius, waveSpeed, colour, weight, nodesPerWave, nodeMotionRadius, nodeSpeed
-  createWaves( 9, 18, 0.01, 'darkblue', 10, 15, 10, 0.007 )
+  createWaves( 9, 18, 0.01, 'darkblue', 5, 15, 10, 0.007 )
 
   frameRate(60)
 
