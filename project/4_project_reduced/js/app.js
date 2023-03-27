@@ -1,7 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
+    console.log('domcontentloaded');
+    
     const destinationCreateFormElement = document.querySelector('#destination-create-form');
     destinationCreateFormElement.addEventListener('submit', handleCreateFormSubmit);
-    console.log('domcontentloaded');
+
+    const 
 })
 
 const handleCreateFormSubmit = function (event) {

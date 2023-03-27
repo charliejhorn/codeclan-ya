@@ -371,9 +371,20 @@ h1 {
 }
 
 .destination-img-carousel-control {
+}
+
+.destination-img-carousel-control button {
+    width: 100%;
     aspect-ratio: 1/1;
-    height: 2rem;
-    background-color: var(--taupe-grey);
+    font-size: 3em;
+    font-variation-settings: 'wght' 700;
+    color: black;
+    background-color: transparent;
+    border: none;
+}
+
+.destination-img-carousel-control button:focus {
+    
 }
 
 #destination-details-container {
