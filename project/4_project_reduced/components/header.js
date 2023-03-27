@@ -7,7 +7,7 @@ class Header extends HTMLElement {
         this.innerHTML = `
         <header>
         <div id="header-title-container">
-            <a id="bucket-bounds-logo" href="/index.html">
+            <a id="bucket-bounds-logo" href="../index.html">
                 <svg
                     width="1266.004"
                     height="153.85902"

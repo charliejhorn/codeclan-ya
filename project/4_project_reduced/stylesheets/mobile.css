@@ -1,11 +1,11 @@
-@media screen and (540px < width < 900px) {
+@media screen and (540px < width < 1010px) {
     body {
         --header-nav-height: 7rem;
     }
 
+    /* moves header nav below logo */
     header {
         flex-direction: column;
-        padding-top: 0px;
     }
 
     #header-title-container {
@@ -13,16 +13,24 @@
     }
 }
 
-@media screen and (width > 540px) {
+/* hide bottom-nav-bar for wider screens */
+@media screen and (width > 610px) {
     #bottom-nav-bar {
         display: none;
+    }
+}
+
+@media screen and (width <= 740px) {
+    /* set home intro buttons to beneath each other rather than beside */
+    #home-intro-buttons-container {
+        flex-direction: column;
     }
 }
 
 
 /* MOBILE BELOW */
 
-@media screen and (width <= 540px) {
+@media screen and (width <= 610px) {
     #header-nav-container {
         display: none;
     }
@@ -46,6 +54,17 @@
     footer {
         margin-bottom: var(--bottom-nav-height);
     }
+
+    #home-page-main h1 {
+        font-size: 2em;
+        height: auto;
+    }
+
+    #home-intro-container {
+        width: 90%;
+        padding: 1.5rem;
+    }
+
 
 
 

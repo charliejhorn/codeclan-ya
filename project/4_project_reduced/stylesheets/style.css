@@ -199,11 +199,11 @@ main * {
 
 #home-page-anim-canvas, canvas {
     width: 100%;
-    height: 100%
+    height: 100%;
 }
 
 #home-page-main {
-    height: calc(100vh - var(--footer-height) - var(--header-nav-height));
+    height: calc(100vh - var(--header-nav-height));
     /* background-color: var(--cambridge-blue);  */
     display: flex;
     align-items: center;
@@ -244,12 +244,8 @@ h1 {
     border-radius: 0.5rem;
 }
 
-.home-intro-icon {
-    position: absolute; 
-    /* opacity: 50%; */
-    font-size: 6.5rem;
-    color: var(--tea-green);
-    z-index: 1;
+.home-intro-anchor:hover {
+    animation: buttonBounce 1s;
 }
 
 .home-intro-anchor h2 {
@@ -260,71 +256,29 @@ h1 {
     z-index: 2;
     text-align: right;
     width: 90%;
+    font-weight: 400;
 }
 
-#travel-explore-icon {
-    left: -12px;
-    top: -11px;
+.home-intro-icon {
+    position: absolute; 
+    opacity: 50%;
+    font-size: 6em;
+    color: var(--tea-green);
+    z-index: 1;
 }
 
-#add-location-icon {
-    left: -20px;
-    top: -11px;
-}
+@keyframes buttonBounce {
+    60% {
+        bottom: 8px;
+        top: 10px;
+    }
+    100% {
+      bottom: 10px;
+      left: 10px;
+    }
+  }
 
 
-
-
-/* COUNTRY-TEMPLATE PAGE */
-
-#location-img-section {
-    height: calc(100vh - var(--header-nav-height));
-}
-
-#location-main-img {
-    width: 100%;    
-    height: 75%;
-    position: relative;
-}
-
-.location-img {
-    border: 2px dashed black;
-    width: 100%;
-    height: 100%;
-}
-
-.location-img img {
-    object-position: 50% 50%;
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-}
-
-.img-description {
-    position: absolute;
-    bottom: 0px;
-    left: 0px;
-    padding: 2em; 
-    padding-top: 5em;   
-    width: 100%;
-    background: linear-gradient(transparent, rgb(108, 108, 108));
-}
-
-.img-description > h1 {
-    margin-block: 0px;
-    font-size: 3.5em;
-    color: white;
-}
-
-#location-img-carousel {
-    height: 25%;
-    width: 100%;
-    display: flex;
-}
-
-.secondary-img {
-    aspect-ratio: 3 / 2;
-}
 
 
 
@@ -392,7 +346,6 @@ h1 {
     display: block;
 }
 
-
 #destination-images .destination-container{
     aspect-ratio: 1/1;
     background-color: var(--taupe-grey);
@@ -452,6 +405,11 @@ h1 {
     position: absolute;
     top: 0;
 }
+
+
+
+
+/* DESTINATION-EDIT */
 
 
 

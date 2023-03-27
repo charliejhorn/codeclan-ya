@@ -21,22 +21,35 @@
   ]
 */
 
-const waves = [];
+let waves = [];
+const canvasDetails = {};
+
+const numOfWaves = 3;
+const waveMotionRadius = 18;
+const waveSpeed = 0.007;
+const colour = 'darkblue';
+const weight = 5;
+const nodesPerWave = 10;
+const nodeMotionRadius = 20;
+const nodeSpeed = 0.004;
+
+function getCanvasDetails() {
+  canvasDetails.element = document.querySelector('#home-page-anim-canvas');
+  canvasDetails.width = canvasDetails.element.offsetWidth;
+  canvasDetails.height = canvasDetails.element.offsetHeight;
+}
+
 
 function setup() {
-  const canvasDiv = document.querySelector('#home-page-anim-canvas');
-  console.log(canvasDiv.offsetHeight);
-  const canvasWidth = canvasDiv.offsetWidth;
-  const canvasHeight = canvasDiv.offsetHeight;
-  const sketchCanvas = createCanvas(canvasWidth, canvasHeight);
-  console.log(sketchCanvas);
-  sketchCanvas.parent(canvasDiv);
+  getCanvasDetails();
+  console.log(canvasDetails);
+  const sketchCanvas = createCanvas(canvasDetails.width, canvasDetails.height);
+  sketchCanvas.parent(canvasDetails.element);
 
-  // numOfWaves, waveMotionRadius, waveSpeed, colour, weight, nodesPerWave, nodeMotionRadius, nodeSpeed
-  createWaves( 9, 18, 0.01, 'darkblue', 5, 15, 10, 0.007 )
-
+  createWaves(numOfWaves, waveMotionRadius, waveSpeed, colour, weight, nodesPerWave, nodeMotionRadius, nodeSpeed)
+  
   frameRate(60)
-
+  
   
   /* console.log( '0:', round( sin( PI * 0) * 100 ) / 100 );
   console.log( '0.1:', round( sin( PI * 0.1) * 100 ) / 100 );
@@ -53,7 +66,7 @@ function draw() {
   for(let wave of waves) {
     moveNodes(wave)
   }
-
+  
   // wave lines
   for(let wave of waves) {
     strokeWeight(2)
@@ -64,8 +77,8 @@ function draw() {
   
   // move waves
   moveWaves()
-
-
+  
+  
   // draw all nodes
   for(let wave of waves) { 
     for(let node of wave.nodes) {
@@ -73,11 +86,22 @@ function draw() {
       point(node.xPos, node.yPos)
     }
   }
-
+  
   // draw curves
   for(let wave of waves) {
     drawWaveCurves(wave)
   }
+}
+
+function windowResized() {
+  resizeCanvas(canvasDetails.width, canvasDetails.height);
+  getCanvasDetails();
+
+  // clear waves object
+  waves = [];
+  console.log('deleted waves');
+  createWaves(numOfWaves, waveMotionRadius, waveSpeed, colour, weight, nodesPerWave, nodeMotionRadius, nodeSpeed)
+  console.log('windowresized');
 }
 
 function moveWaves() {
