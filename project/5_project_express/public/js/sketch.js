@@ -27,10 +27,10 @@ let waves = [];
 const canvasDetails = {};
 
 const numOfWaves = 5;
-const waveMotionRadius = 30;
+const waveMotionRadius = 15;
 const waveSpeed = 0.007;
-const colour = 'darkblue';
-const weight = 1;
+const colour = '#2667FF';
+const weight = 10;
 const nodesPerWave = 10;
 const nodeXMotionRadius = 20;
 const nodeYMotionRadius = 20; 
@@ -63,7 +63,7 @@ function setup() {
 }
 
 function draw() {
-  background('lightblue');
+  background('#3F8EFC');
   
   // move nodes in each wave
   for(let wave of waves) {
@@ -118,11 +118,11 @@ function moveWaves() {
 }
 
 function moveNodes(wave) {
-  let index = 0;
+  let n = 0;
   for(let node of wave.nodes) {
     // move node in x according to sin Y value (sinPos is input)
     // only IF node is not first or last
-    if(index != 0 || index != wave.nodes.length) {
+    if(n != 0 && n != wave.nodes.length-1) {
       // calculate y position on sin graph (-1 to 1), multiply by radius, add to initial x position
       node.xPos = (sin(PI * node.sinPos) * wave.nodeXMotionRadius + node.initialX)
     }
@@ -133,7 +133,7 @@ function moveNodes(wave) {
     
     // increment sinPos
     node.sinPos += node.speed;
-    index++;
+    n++;
   } 
 }
 
@@ -144,7 +144,7 @@ function drawWaveCurves(wave) {
     noFill()
 
     // set control point difference
-    const cpd = 75
+    const cpd = 100;
 
     // create start and end points
     const startPoint = [wave.nodes[index].xPos, wave.nodes[index].yPos]
