@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bucket Bounds</title>
+    
+    <link rel="icon" href="/assets/pail.svg">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz@20..48" rel="stylesheet" />
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="/stylesheets/mobile.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Yeseva+One&display=swap" rel="stylesheet">
+    <script src="/js/app.js"></script>
+    <script src="/components/header.js"></script>
+    <script src="/components/bottom-nav.js"></script>
+    <script src="/components/footer.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.6/p5.js"></script>
+    <script src="js/sketch.js"></script>
+</head>
+<body>
+
+    <header-component></header-component>   
+
+    <main id="home-page-main">
+        <div id="home-page-anim-canvas"></div>
+
+        <div id="home-intro-container">
+            <h1>Your Personalised Travel Bucket List</h1>
+            <section id="home-intro-buttons-container">
+                <a class="bounce-button home-intro-anchor" href="/destination-list.html">
+                    <span id='travel-explore-icon'class='home-intro-icon material-symbols-outlined' alt="browse destinations icon">
+                        travel_explore
+                    </span>
+                    <h2>view your saved destination bounds ↗</h2>
+                </a>  
+                <a class="bounce-button home-intro-anchor" href="/html/destination-edit.html">
+                    <span id="add-location-icon" class='home-intro-icon material-symbols-outlined' alt="browse destinations icon">
+                        add_location
+                    </span>
+                    <h2>create a new destination bound ↗</h2>
+                </a>
+            </section>
+        </div>
+    </main>
+
+    <footer-component></footer-component>
+
+    <bottom-nav-component></bottom-nav-component>
+
+</body>
+</html>

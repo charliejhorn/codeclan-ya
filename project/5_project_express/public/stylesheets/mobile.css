@@ -1,0 +1,91 @@
+@media screen and (540px < width < 1010px) {
+    body {
+        --header-nav-height: 7rem;
+    }
+
+    /* moves header nav below logo */
+    header {
+        flex-direction: column;
+    }
+
+    #header-title-container {
+        width: 300px;
+    }
+}
+
+/* hide bottom-nav-bar for wider screens */
+@media screen and (width > 610px) {
+    #bottom-nav-bar {
+        display: none;
+    }
+}
+
+@media screen and (width <= 740px) {
+    /* set home intro buttons to beneath each other rather than beside */
+    #home-intro-buttons-container {
+        flex-direction: column;
+    }
+}
+
+
+/* MOBILE BELOW */
+
+@media screen and (width <= 610px) {
+    #header-nav-container {
+        display: none;
+    }
+    
+    body {
+        --header-nav-height: 4rem;
+
+        --main-content-height: calc( 100vh - var(--header-nav-height) - var(--bottom-nav-height) );
+    }
+
+    header {
+        justify-content: center;
+    }
+
+    #header-title-container {
+        width: auto;
+    }
+    
+    #bottom-nav-bar {
+        position: fixed;
+    }
+
+    footer {
+        margin-bottom: var(--bottom-nav-height);
+    }
+
+    #home-page-main h1 {
+        font-size: 2em;
+        height: auto;
+    }
+
+    #home-intro-container {
+        width: 90%;
+        padding: 1.5rem;
+    }
+
+    #destination-name-container {
+        font-size: 1.3em;
+    }
+
+
+
+
+    /* DESTINATION-VIEW */
+
+    /* #destination-details {} */
+}
+
+@media screen and (width <= 350px) {
+    .bottom-nav-bar {
+        
+        gap: 0.1rem;
+    } 
+
+    .bottom-nav-bar-link-container {
+        width: auto;
+    }
+}
