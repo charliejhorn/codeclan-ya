@@ -18,7 +18,10 @@
 
 - Download repository
 
-- <info on initiating node/npm and running server>
+- in terminal:
+- run `npm install`
+- run `npm run server:dev`
+
 
 
 

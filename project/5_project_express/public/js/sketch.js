@@ -33,7 +33,7 @@ const colour = 'darkblue';
 const weight = 1;
 const nodesPerWave = 10;
 const nodeXMotionRadius = 20;
-const nodeYMotionRadius = 20;
+const nodeYMotionRadius = 20; 
 const nodeSpeed = 0.004;
 
 function getCanvasDetails() {
