@@ -1,15 +1,23 @@
 @media screen and (540px < width < 1010px) {
     body {
-        --header-nav-height: 7rem;
+        --header-nav-height: 7.75rem;
     }
 
     /* moves header nav below logo */
     header {
         flex-direction: column;
+        padding: 0.5rem 0;
+        align-content: space-between;
     }
 
     #header-title-container {
-        width: 300px;
+        width: 500px;
+        height: 4rem;
+    }
+
+    #bucket-bounds-title-anchor {
+        justify-content: center;
+
     }
 }
 
@@ -55,6 +63,8 @@
 
     footer {
         margin-bottom: var(--bottom-nav-height);
+        flex-direction: column;
+        gap: 1.5rem;
     }
 
     #home-page-main h1 {
@@ -62,9 +72,8 @@
         height: auto;
     }
 
-    #home-intro-container {
+    #home-intro-box {
         width: 90%;
-        padding: 1.5rem;
     }
 
     #destination-name-container {
@@ -87,5 +96,9 @@
 
     .bottom-nav-bar-link-container {
         width: auto;
+    }
+
+    #home-intro-content-container {
+        padding: 1.5rem;
     }
 }
