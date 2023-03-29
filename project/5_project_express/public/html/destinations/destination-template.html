@@ -17,19 +17,14 @@
     <script src="/components/header.js"></script>
     <script src="/components/bottom-nav.js"></script>
     <script src="/components/footer.js"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.6/p5.js"></script>
 </head>
 <body>
-    <script src="../../js/app.js"></script>
-    <script src="../../components/header.js"></script>
-    <script src="../../components/bottom-nav.js"></script>
-    <script src="../../components/footer.js"></script>
     
     <header-component></header-component>
 
     <main id="destination-page">
         <section id="destination-img-details-container">
-            <div id="destination-img-carousel-container">
+            <div id="destination-img-carousel-container"  data-imgnum="0">
 
                 <div id="destination-img-carousel-controls">
                     <div id="destination-img-carousel-control-left-container" class="destination-img-carousel-control">
@@ -40,10 +35,15 @@
                     </div>
                 </div>
 
-                <div class="img-container">
-                    <img src="../../assets/test-img-3.jpg" alt="test image">
-                </div>
+                <div id="images-container">
+                    <div class="carousel-img img-container">
+                        <img src="../../assets/test-img-3.jpg" alt="test image">
+                    </div>
+                    <div class="carousel-img img-container">
+                        <img src="../../assets/test-img-3.jpg" alt="test image">
+                    </div>
 
+                </div>
             </div>
 
             <div id="destination-details-container">

@@ -12,7 +12,7 @@ class Header extends HTMLElement {
                     <img src='/assets/bucket_icon.webp'>
                 </div>
 
-                <div id='header-svg-container'>
+                <div id='bucketbounds-svg-container'>
                     <svg
                         width="1266.004"
                         height="153.85902"
