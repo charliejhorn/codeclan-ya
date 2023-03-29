@@ -217,10 +217,11 @@ nav h6 {
 footer {
     background-color: var(--taupe-grey);
     color: white;
-    padding: 1.5rem;
+    padding: 3rem;
 
     display: flex;
-    gap: 5rem;
+    justify-content: space-between;
+    gap: 3rem;
 
     font-family: 'Josefin Sans', sans-serif;
     color: white;
@@ -380,22 +381,6 @@ h1 {
     display: block;
 }
 
-.destination-container {
-    display: flex;
-    align-items: center;
-}
-
-#destination-images .destination-container{
-    aspect-ratio: 1/1;
-    background-color: var(--taupe-grey);
-    border-radius: 0.5rem;
-}
-
-#images-container {
-    display: flex;
-    overflow: hidden;
-}
-
 #destination-img-details-container {
     height: var(--main-content-height);
     background-color: var(--cambridge-blue);
@@ -405,6 +390,20 @@ h1 {
 #destination-img-carousel-container {
     height: 100%;
     position: relative;
+    
+    overflow: hidden;
+}
+
+#images-container {
+    display: flex;
+    height: 100%;
+    width: max-content;
+    transform: translate(0, 0);
+    transition: transform var(--button-transition-time) ease-in;
+}
+
+.carousel-img {
+    width: 100vw;
 }
 
 #destination-img-carousel-controls {
@@ -414,6 +413,7 @@ h1 {
     display: flex;
     justify-content: space-between;
     padding: 0 0.5rem;
+    z-index: 2;
 }
 
 .destination-img-carousel-control button {
@@ -491,14 +491,20 @@ h1 {
     font-size: 1.7em;
 }
 
+#destination-create-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
 #destination-create-form-container input[type=text] {
-    width: max-content;
+    width: 100%;
     background-color: transparent;
     border: none;
     border-bottom: 1px black solid;
     font-weight: 300;
     font-size: inherit;
-    margin-top: 0.5em;
+    margin-top: 0.3em;
     padding: 0px;
     padding-bottom: 1px;
 }

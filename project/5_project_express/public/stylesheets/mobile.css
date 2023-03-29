@@ -64,7 +64,7 @@
     footer {
         margin-bottom: var(--bottom-nav-height);
         flex-direction: column;
-        gap: 1.5rem;
+        gap: 3rem;
     }
 
     #home-page-main h1 {

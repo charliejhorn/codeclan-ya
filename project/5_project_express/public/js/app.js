@@ -11,11 +11,10 @@ document.addEventListener('DOMContentLoaded', () => {
     // destination view below
     if(mainELement.id === 'destination-page') {
         const carouselElement = document.querySelector('#destination-img-carousel-container')
+        const maxIndex = document.querySelectorAll(".carousel-img").length -1;
         console.log('carouselElement', carouselElement);
-        const numImages = document.querySelectorAll(".carousel-img").length;
-        console.log('numImages', numImages);
-
-        carouselElement.dataset
+        console.log('maxIndex', maxIndex);
+        console.log('initial index', carouselElement.dataset.imgnum);
 
 
         const leftButton = document.querySelector('#destination-img-carousel-control-left-button')
@@ -40,17 +39,34 @@ const handleCreateFormSubmit = function (event) {
 }
 
 const handleCarouselButton = function (event) {
-    // console.log(event);
-    // console.log(carouselElement)
-    // // console.log(carouselElement.dataset.imgnum)
-    // console.log(numImages);
-
-
-
+    const carouselElement = document.querySelector('#destination-img-carousel-container')
+    const maxIndex = document.querySelectorAll(".carousel-img").length -1;
+    const imagesContainer = document.querySelector('#images-container')
+    let index = carouselElement.dataset.imgnum;
+    
+    
+    // add or subtract index
     if(event.target.id.includes('left')) {
-        carouselElement.dataset.imgnum--
+        console.log('left');
+        index--
+        carouselElement.dataset.imgnum = index
     } else if (event.target.id.includes('right')) {
-        carouselElement.dataset.imgnum++
+        console.log('right');
+        index++
+        carouselElement.dataset.imgnum = index
     };
+    console.log('index after increase/decrease', index);
+    
+    // reset index if needed
+    if(index < 0) {
+        index = maxIndex;
+        carouselElement.dataset.imgnum = index
+    }  else if (index > maxIndex) {
+        index = 0;
+        carouselElement.dataset.imgnum = index
+    }
+    console.log('index', index);
+
+    imagesContainer.style.transform = `translate( calc(${index} * 100vw * -1), 0 )`;
 }
 
