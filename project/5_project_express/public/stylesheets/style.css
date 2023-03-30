@@ -429,6 +429,11 @@ h1 {
     cursor: pointer;
 }
 
+.destination-img-carousel-control button:hover {
+    opacity: 100%;
+    transition: 0.5s
+}
+
 /* .destination-img-carousel-control button:focus {
     
 } */
