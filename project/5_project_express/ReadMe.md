@@ -30,25 +30,25 @@
 
 - Used KanBan board to track tasks
   
-  ![kanban.png](readme_assets\kanban.png)
+  ![kanban.png](https://github.com/charliejhorn/codeclan-ya/blob/main/project/5_project_express/readme_assets/kanban.png)
 
 - Used mindmap to brainstorm app details/elements
   
-  ![obs canvas.png](readme_assets\obs%20canvas.png)
+  ![obs canvas.png](https://github.com/charliejhorn/codeclan-ya/blob/main/project/5_project_express/readme_assets/obs%20canvas.png)
 
 # Wireframes
 
 - I used an Obsidian plugin called Excalidraw to produce these wireframes
 
-![home page.png](readme_assets\home%20page.png)
+![home page.png](https://github.com/charliejhorn/codeclan-ya/blob/main/project/5_project_express/readme_assets/home%20page.png)
 
-![individual destination page.png](readme_assets\individual%20destination%20page.png)
+![individual destination page.png](https://github.com/charliejhorn/codeclan-ya/blob/main/project/5_project_express/readme_assets/individual%20destination%20page.png)
 
-![p5 waves anim.png](readme_assets\p5%20waves%20anim.png)
+![p5 waves anim.png](https://github.com/charliejhorn/codeclan-ya/blob/main/project/5_project_express/readme_assets/p5%20waves%20anim.png)
 
-![destination create page.png](readme_assets\destination%20create%20page.png)
+![destination create page.png](https://github.com/charliejhorn/codeclan-ya/blob/main/project/5_project_express/readme_assets/destination%20create%20page.png)
 
-![destination list browse page.png](readme_assets\destination%20list%20browse%20page.png)
+![destination list browse page.png](https://github.com/charliejhorn/codeclan-ya/blob/main/project/5_project_express/readme_assets/destination%20list%20browse%20page.png)
 
 # SEO
 
