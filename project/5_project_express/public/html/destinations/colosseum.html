@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destination View (mobile)</title>
+    
+    <link rel="icon" href="/assets/bucket_logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz@20..48" rel="stylesheet" />
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="/stylesheets/mobile.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Yeseva+One&display=swap" rel="stylesheet">
+    <script src="/js/app.js"></script>
+    <script src="/components/header.js"></script>
+    <script src="/components/bottom-nav.js"></script>
+    <script src="/components/footer.js"></script>
+</head>
+<body>
+    
+    <header-component></header-component>
+
+    <main id="destination-page">
+        <section id="destination-img-details-container">
+            <div id="destination-img-carousel-container"  data-imgnum="0">
+
+                <div id="destination-img-carousel-controls">
+                    <div id="destination-img-carousel-control-left-container" class="destination-img-carousel-control">
+                        <button id="destination-img-carousel-control-left-button" class="material-symbols-outlined">chevron_left</button>
+                    </div>
+                    <div id="destination-img-carousel-control-right-container" class="destination-img-carousel-control">
+                        <button id="destination-img-carousel-control-right-button" class="material-symbols-outlined">chevron_right</button>
+                    </div>
+                </div>
+
+                <div id="images-container">
+                    <div class="carousel-img img-container">
+                        <img src="https://images.pexels.com/photos/1797161/pexels-photo-1797161.jpeg" alt="test image">
+                    </div>
+                    <div class="carousel-img img-container">
+                        <img src="https://images.pexels.com/photos/2225443/pexels-photo-2225443.jpeg" alt="test image">
+                    </div>
+                    <div class="carousel-img img-container">
+                        <img src="https://images.pexels.com/photos/2676642/pexels-photo-2676642.jpeg" alt="test image">
+                    </div>
+                </div>  
+            </div>
+
+            <div id="destination-details-container">
+                <div class='destination-container' id="destination-name-container">
+                    <h1 id="destination-name">Colosseum</h1>
+                </div>
+
+                <div id="destination-details-city-country-container">
+                    <div class='destination-container' id="destination-country-container">
+                        <h2 id="destination-country">Italy</h2>
+                    </div>
+                    <div class='destination-container'>
+                        <h2>|</h2>
+                    </div>                    
+                    <div class='destination-container' id="destination-city-container">
+                        <h2 id="destination-city">Rome</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class='destination-container' id="destination-category-container">
+                <h2 id="destination-category">Historical</h2>
+            </div>
+        </section>
+
+        <div class='destination-container' id="destination-description-container">
+            <p id="destination-description">
+                The Colosseum is an elliptical amphitheatre in the centre of the city of Rome, Italy, just east of the Roman Forum. It is the largest ancient amphitheatre ever built, and is still the largest standing amphitheatre in the world, despite its age. Construction began under the emperor Vespasian (r. 69–79 AD) in 72[1] and was completed in 80 AD under his successor and heir, Titus (r. 79–81).
+            </p> 
+        </div>
+    </main>
+
+    <footer-component></footer-component>
+
+    <bottom-nav-component></bottom-nav-component>
+</body>
+</html>

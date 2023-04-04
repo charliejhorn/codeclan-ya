@@ -97,8 +97,8 @@ function draw() {
 }
 
 function windowResized() {
-  resizeCanvas(canvasDetails.width, canvasDetails.height);
   getCanvasDetails();
+  resizeCanvas(canvasDetails.width, canvasDetails.height);
 
   // clear waves object
   waves = [];
